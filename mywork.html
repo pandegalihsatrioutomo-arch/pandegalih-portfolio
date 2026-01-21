@@ -30,19 +30,14 @@
 </head>
 
 <body
-  class="min-h-screen bg-cover bg-center bg-no-repeat font-serif"
+  class="min-h-screen bg-cover bg-center bg-no-repeat font-serif text-black"
   style="background-image: url('asset/BG.png');"
 >
 
   <!-- NAVBAR (TIDAK IKUT SCROLL) -->
   <nav
     class="absolute top-6 left-1/2 -translate-x-1/2 z-30
-           flex flex-col sm:flex-row items-center
-           gap-4 sm:gap-14
-           text-xs sm:text-sm
-           font-semibold
-           tracking-widest
-           text-black"
+           flex gap-12 text-xs tracking-widest font-semibold"
   >
     <a href="index.html" class="hover:opacity-60">HOME</a>
     <a href="about.html" class="hover:opacity-60">ABOUT</a>
@@ -50,24 +45,25 @@
     <a href="contact.html" class="hover:opacity-60">CONTACT</a>
   </nav>
 
-  <!-- MY WORK -->
-  <section class="min-h-screen pt-32 px-4 sm:px-10">
-    <div
-      class="bg-white/80 max-w-6xl mx-auto
-             px-8 sm:px-16 py-12 sm:py-16"
-    >
+  <!-- MY WORK SECTION -->
+  <section class="pt-32 pb-24 px-6 sm:px-12">
+    <div class="bg-white/80 max-w-6xl mx-auto px-8 sm:px-16 py-16">
 
-      <!-- TITLE -->
-      <div class="mb-20">
-        <p class="text-xs tracking-widest mb-3">
-          SELECTED WORKS
+      <!-- HEADER -->
+      <div class="mb-24 max-w-xl">
+        <p class="text-xs tracking-widest mb-4">
+          SELECTED PROJECTS
         </p>
-        <h1 class="text-2xl sm:text-4xl">
-          Visual Exploration
+        <h1 class="text-3xl sm:text-5xl leading-tight">
+          My Work
         </h1>
+        <p class="mt-6 text-sm sm:text-base leading-relaxed">
+          A curated selection of UI/UX and visual projects
+          that reflect my design thinking and visual exploration.
+        </p>
       </div>
 
-      <!-- ABSTRACT GALLERY -->
+      <!-- GALLERY (ABSTRACT / EDITORIAL) -->
       <div class="grid grid-cols-12 gap-y-24 gap-x-6">
 
         <!-- PROJECT 1 -->
@@ -75,22 +71,22 @@
           <img
             src="asset/project/project1.png"
             alt="Project 1"
-            class="w-full object-cover"
+            class="w-full object-cover transition hover:scale-[1.02]"
           />
           <p class="mt-4 text-sm tracking-wide">
-            Project One
+            Project One — UI / UX Design
           </p>
         </div>
 
         <!-- PROJECT 2 -->
-        <div class="col-span-12 sm:col-span-4 sm:col-start-9 sm:mt-28">
+        <div class="col-span-12 sm:col-span-4 sm:col-start-9 sm:mt-32">
           <img
             src="asset/project/project2.png"
             alt="Project 2"
-            class="w-full object-cover"
+            class="w-full object-cover transition hover:scale-[1.02]"
           />
           <p class="mt-4 text-sm tracking-wide">
-            Project Two
+            Project Two — Mobile App
           </p>
         </div>
 
@@ -99,27 +95,26 @@
           <img
             src="asset/project/project3.png"
             alt="Project 3"
-            class="w-full object-cover"
+            class="w-full object-cover transition hover:scale-[1.02]"
           />
           <p class="mt-4 text-sm tracking-wide">
-            Project Three
+            Project Three — Visual Concept
           </p>
         </div>
 
       </div>
 
-      <!-- SEE MORE BUTTON -->
-      <div class="mt-24 flex justify-center">
+      <!-- SEE MORE -->
+      <div class="mt-28 flex justify-center">
         <a
           href="https://github.com/pandegalihsatrioutomo-arch"
           target="_blank"
-          class="px-10 py-3
-                 border border-black
+          class="px-10 py-3 border border-black
                  text-xs tracking-widest
                  hover:bg-black hover:text-white
-                 transition duration-300"
+                 transition"
         >
-          SEE MORE
+          SEE MORE PROJECTS
         </a>
       </div>
 

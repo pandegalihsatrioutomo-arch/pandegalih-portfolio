@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Work | Pande Galih</title>
+  <title>Portfolio | Pande Galih</title>
 
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,6 +16,7 @@
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
+  <!-- Tailwind Config -->
   <script>
     tailwind.config = {
       theme: {
@@ -30,94 +31,69 @@
 </head>
 
 <body
-  class="min-h-screen bg-cover bg-center bg-no-repeat font-serif text-black"
+  class="min-h-screen bg-cover bg-center bg-no-repeat font-serif"
   style="background-image: url('asset/BG.png');"
 >
 
-  <!-- NAVBAR (TIDAK IKUT SCROLL) -->
+  <!-- NAVBAR (MINIMAL, NO BACKGROUND) -->
   <nav
-    class="absolute top-6 left-1/2 -translate-x-1/2 z-30
-           flex gap-12 text-xs tracking-widest font-semibold"
+    class="fixed top-6 left-1/2 -translate-x-1/2 z-30
+           flex flex-col sm:flex-row items-center
+           gap-4 sm:gap-14
+           text-xs sm:text-sm
+           font-semibold
+           tracking-widest
+           text-black"
   >
     <a href="index.html" class="hover:opacity-60">HOME</a>
     <a href="about.html" class="hover:opacity-60">ABOUT</a>
-    <a href="mywork.html" class="opacity-100">MYWORK</a>
+    <a href="mywork.html" class="hover:opacity-60">MYWORK</a>
     <a href="contact.html" class="hover:opacity-60">CONTACT</a>
   </nav>
 
-  <!-- MY WORK SECTION -->
-  <section class="pt-32 pb-24 px-6 sm:px-12">
-    <div class="bg-white/80 max-w-6xl mx-auto px-8 sm:px-16 py-16">
+  <!-- HERO -->
+  <section class="min-h-screen flex items-center justify-center px-4 sm:px-10">
+    <div
+      class="bg-white/80 max-w-5xl w-full
+             px-10 sm:px-20 py-10 sm:py-14"
+    >
 
-      <!-- HEADER -->
-      <div class="mb-24 max-w-xl">
-        <p class="text-xs tracking-widest mb-4">
-          SELECTED PROJECTS
-        </p>
-        <h1 class="text-3xl sm:text-5xl leading-tight">
-          My Work
-        </h1>
-        <p class="mt-6 text-sm sm:text-base leading-relaxed">
-          A curated selection of UI/UX and visual projects
-          that reflect my design thinking and visual exploration.
-        </p>
-      </div>
+      <!-- CONTENT ROW -->
+      <div
+        class="flex flex-col sm:flex-row
+               items-center sm:items-start
+               justify-between"
+      >
 
-      <!-- GALLERY (ABSTRACT / EDITORIAL) -->
-      <div class="grid grid-cols-12 gap-y-24 gap-x-6">
+        <!-- LEFT TEXT -->
+        <div class="max-w-md text-center sm:text-left">
+          <p class="text-xs tracking-widest mb-5">
+            PORTOFOLIO.
+          </p>
 
-        <!-- PROJECT 1 -->
-        <div class="col-span-12 sm:col-span-7">
-          <img
-            src="asset/project/project1.png"
-            alt="Project 1"
-            class="w-full object-cover transition hover:scale-[1.02]"
-          />
-          <p class="mt-4 text-sm tracking-wide">
-            Project One — UI / UX Design
+          <h1 class="text-2xl sm:text-4xl leading-snug mb-5">
+            PANDE GALIH<br />
+            <span class="border-b-2 border-black">
+              SATRIO UTOMO
+            </span>
+          </h1>
+
+          <p class="text-sm sm:text-lg leading-relaxed">
+            A UI/UX Designer dan<br />
+            Photographer Based in Bali
           </p>
         </div>
 
-        <!-- PROJECT 2 -->
-        <div class="col-span-12 sm:col-span-4 sm:col-start-9 sm:mt-32">
+        <!-- RIGHT IMAGE -->
+        <div class="mt-8 sm:mt-0 ml-auto">
           <img
-            src="asset/project/project2.png"
-            alt="Project 2"
-            class="w-full object-cover transition hover:scale-[1.02]"
+            src="asset/profil1.jpg"
+            alt="profile"
+            class="w-44 sm:w-64 object-cover"
           />
-          <p class="mt-4 text-sm tracking-wide">
-            Project Two — Mobile App
-          </p>
-        </div>
-
-        <!-- PROJECT 3 -->
-        <div class="col-span-12 sm:col-span-6 sm:col-start-4 sm:-mt-20">
-          <img
-            src="asset/project/project3.png"
-            alt="Project 3"
-            class="w-full object-cover transition hover:scale-[1.02]"
-          />
-          <p class="mt-4 text-sm tracking-wide">
-            Project Three — Visual Concept
-          </p>
         </div>
 
       </div>
-
-      <!-- SEE MORE -->
-      <div class="mt-28 flex justify-center">
-        <a
-          href="https://github.com/pandegalihsatrioutomo-arch"
-          target="_blank"
-          class="px-10 py-3 border border-black
-                 text-xs tracking-widest
-                 hover:bg-black hover:text-white
-                 transition"
-        >
-          SEE MORE PROJECTS
-        </a>
-      </div>
-
     </div>
   </section>
 
