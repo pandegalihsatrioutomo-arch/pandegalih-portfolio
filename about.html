@@ -30,46 +30,73 @@
 </head>
 
 <body
-  class="min-h-screen bg-cover bg-center bg-no-repeat font-serif"
+  class="min-h-screen bg-cover bg-center bg-no-repeat font-serif text-neutral-900"
   style="background-image: url('asset/BG.png');"
 >
 
-  <!-- NAVBAR (SAMA DENGAN HOME) -->
-  <nav
-    class="fixed top-6 left-1/2 -translate-x-1/2 z-30
-           flex flex-col sm:flex-row items-center
-           gap-4 sm:gap-14
-           text-xs sm:text-sm
-           font-semibold
-           tracking-widest
-           text-black"
+<!-- ================= NAVBAR ================= -->
+<header class="absolute top-6 w-full z-40">
+  <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+
+    <!-- NAME -->
+    <span class="text-xs tracking-widest font-semibold">
+      PANDE GALIH
+    </span>
+
+    <!-- DESKTOP NAV -->
+    <nav class="hidden sm:flex gap-12 text-xs tracking-widest font-semibold">
+      <a href="index.html" class="hover:opacity-60">HOME</a>
+      <a href="about.html" class="opacity-100">ABOUT</a>
+      <a href="mywork.html" class="hover:opacity-60">MYWORK</a>
+      <a href="contact.html" class="hover:opacity-60">CONTACT</a>
+    </nav>
+
+    <!-- BURGER -->
+    <button id="menuBtn" class="sm:hidden flex flex-col gap-1.5">
+      <span class="w-6 h-px bg-black"></span>
+      <span class="w-6 h-px bg-black"></span>
+      <span class="w-6 h-px bg-black"></span>
+    </button>
+
+  </div>
+</header>
+
+<!-- ================= MOBILE MENU ================= -->
+<div
+  id="mobileMenu"
+  class="fixed inset-0 z-50 bg-white/95
+         flex flex-col items-center justify-center
+         gap-10 text-sm tracking-widest font-semibold
+         opacity-0 pointer-events-none transition duration-300"
+>
+  <button id="closeBtn" class="absolute top-6 right-6 text-xl">✕</button>
+
+  <a href="index.html">HOME</a>
+  <a href="about.html">ABOUT</a>
+  <a href="mywork.html">MYWORK</a>
+  <a href="contact.html">CONTACT</a>
+</div>
+
+<!-- ================= ABOUT ================= -->
+<section class="min-h-screen flex items-center px-6 sm:px-12 pt-32">
+  <div
+    class="bg-white/80 max-w-5xl mx-auto w-full
+           px-10 sm:px-20 py-16"
   >
-    <a href="index.html" class="hover:opacity-60">HOME</a>
-    <a href="about.html" class="opacity-100">ABOUT</a>
-    <a href="mywork.html" class="hover:opacity-60">MYWORK</a>
-    <a href="contact.html" class="hover:opacity-60">CONTACT</a>
-  </nav>
 
-  <!-- ABOUT SECTION -->
-  <section class="min-h-screen flex items-center justify-center px-4 sm:px-10">
-    <div
-      class="bg-white/80 max-w-4xl w-full
-             px-10 sm:px-20 py-10 sm:py-14"
-    >
+    <div class="max-w-2xl">
 
-      <!-- TITLE -->
-      <div class="mb-8 text-center sm:text-left">
-        <p class="text-xs tracking-widest mb-3">
-          ABOUT ME
-        </p>
+      <!-- HEADER -->
+      <p class="text-xs tracking-widest mb-6">
+        ABOUT ME
+      </p>
 
-        <h1 class="text-2xl sm:text-4xl leading-snug">
-          Who I Am
-        </h1>
-      </div>
+      <h1 class="text-3xl sm:text-5xl leading-tight mb-10">
+        Who I Am
+      </h1>
 
       <!-- CONTENT -->
-      <div class="max-w-2xl text-sm sm:text-lg leading-relaxed space-y-6">
+      <div class="space-y-8 text-sm sm:text-lg leading-relaxed">
         <p>
           Saya adalah seorang UI/UX Designer dan Photographer berbasis di Bali
           yang berfokus pada desain yang fungsional, tenang, dan bermakna.
@@ -87,8 +114,38 @@
         </p>
       </div>
 
+      <!-- CTA -->
+      <div class="mt-14">
+        <a
+          href="mywork.html"
+          class="inline-block px-10 py-3
+                 border border-black
+                 text-xs tracking-widest
+                 hover:bg-black hover:text-white
+                 transition"
+        >
+          VIEW MY WORK
+        </a>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const closeBtn = document.getElementById("closeBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.remove("opacity-0", "pointer-events-none");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    mobileMenu.classList.add("opacity-0", "pointer-events-none");
+  });
+</script>
 
 </body>
 </html>

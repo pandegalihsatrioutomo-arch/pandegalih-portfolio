@@ -30,92 +30,134 @@
 </head>
 
 <body
-  class="min-h-screen bg-cover bg-center bg-no-repeat font-serif"
+  class="min-h-screen bg-cover bg-center bg-no-repeat font-serif text-neutral-900"
   style="background-image: url('asset/BG.png');"
 >
 
-  <!-- NAVBAR (STATIC, TIDAK IKUT SCROLL) -->
-  <nav
-    class="absolute top-6 left-1/2 -translate-x-1/2 z-30
-           flex flex-col sm:flex-row items-center
-           gap-4 sm:gap-14
-           text-xs sm:text-sm
-           font-semibold
-           tracking-widest
-           text-black"
+<!-- ================= NAVBAR ================= -->
+<header class="absolute top-6 w-full z-40">
+  <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+
+    <!-- NAME -->
+    <span class="text-xs tracking-widest font-semibold">
+      PANDE GALIH
+    </span>
+
+    <!-- DESKTOP NAV -->
+    <nav class="hidden sm:flex gap-12 text-xs tracking-widest font-semibold">
+      <a href="index.html" class="hover:opacity-60">HOME</a>
+      <a href="about.html" class="hover:opacity-60">ABOUT</a>
+      <a href="mywork.html" class="hover:opacity-60">MYWORK</a>
+      <a href="contact.html" class="opacity-100">CONTACT</a>
+    </nav>
+
+    <!-- BURGER -->
+    <button id="menuBtn" class="sm:hidden flex flex-col gap-1.5">
+      <span class="w-6 h-px bg-black"></span>
+      <span class="w-6 h-px bg-black"></span>
+      <span class="w-6 h-px bg-black"></span>
+    </button>
+
+  </div>
+</header>
+
+<!-- ================= MOBILE MENU ================= -->
+<div
+  id="mobileMenu"
+  class="fixed inset-0 z-50 bg-white/95
+         flex flex-col items-center justify-center
+         gap-10 text-sm tracking-widest font-semibold
+         opacity-0 pointer-events-none transition duration-300"
+>
+  <button id="closeBtn" class="absolute top-6 right-6 text-xl">✕</button>
+
+  <a href="index.html">HOME</a>
+  <a href="about.html">ABOUT</a>
+  <a href="mywork.html">MYWORK</a>
+  <a href="contact.html">CONTACT</a>
+</div>
+
+<!-- ================= CONTACT ================= -->
+<section class="min-h-screen flex items-center px-6 sm:px-12 pt-32">
+  <div
+    class="bg-white/80 max-w-5xl mx-auto w-full
+           px-10 sm:px-20 py-16"
   >
-    <a href="index.html" class="hover:opacity-60">HOME</a>
-    <a href="about.html" class="hover:opacity-60">ABOUT</a>
-    <a href="mywork.html" class="hover:opacity-60">MYWORK</a>
-    <a href="contact.html" class="opacity-100">CONTACT</a>
-  </nav>
 
-  <!-- CONTACT SECTION -->
-  <section class="min-h-screen pt-32 px-4 sm:px-10 flex items-center">
-    <div
-      class="bg-white/80 max-w-4xl mx-auto
-             px-8 sm:px-16 py-14 sm:py-20 w-full"
-    >
+    <div class="max-w-xl">
 
-      <!-- TITLE -->
-      <div class="mb-14">
-        <p class="text-xs tracking-widest mb-3">
-          GET IN TOUCH
-        </p>
-        <h1 class="text-2xl sm:text-4xl leading-snug">
-          Let’s work<br />together
-        </h1>
-      </div>
+      <!-- HEADER -->
+      <p class="text-xs tracking-widest mb-6">
+        GET IN TOUCH
+      </p>
 
-      <!-- CONTENT -->
-      <div class="max-w-xl">
-        <p class="text-sm sm:text-lg leading-relaxed mb-10">
-          If you are interested in collaborating, working together,
-          or just want to say hello — feel free to reach out.
-        </p>
+      <h1 class="text-3xl sm:text-5xl leading-tight mb-8">
+        Let’s work<br />
+        together
+      </h1>
 
-        <!-- CONTACT INFO -->
-        <div class="space-y-6 text-sm sm:text-base">
+      <p class="text-sm sm:text-lg leading-relaxed mb-14">
+        If you’re interested in collaborating,
+        discussing a project, or just saying hello,
+        feel free to reach out anytime.
+      </p>
 
-          <div>
-            <p class="tracking-widest text-xs mb-1">EMAIL</p>
-            <a
-              href="mailto:pandegalihsatrioutomo@gmail.com"
-              class="hover:underline"
-            >
-              pandegalihsatrioutomo@gmail.com
-            </a>
-          </div>
+      <!-- CONTACT LIST -->
+      <div class="space-y-10 text-sm sm:text-base">
 
-          <div>
-            <p class="tracking-widest text-xs mb-1">GITHUB</p>
-            <a
-              href="https://github.com/pandegalihsatrioutomo-arch"
-              target="_blank"
-              class="hover:underline"
-            >
-              github.com/pandegalihsatrioutomo-arch
-            </a>
-          </div>
+        <div>
+          <p class="text-xs tracking-widest mb-2">EMAIL</p>
+          <a
+            href="mailto:pandegalihsatrioutomo@gmail.com"
+            class="hover:underline"
+          >
+            pandegalihsatrioutomo@gmail.com
+          </a>
+        </div>
 
-          <div>
-            <p class="tracking-widest text-xs mb-1">INSTAGRAM</p>
-           <a
+        <div>
+          <p class="text-xs tracking-widest mb-2">GITHUB</p>
+          <a
+            href="https://github.com/pandegalihsatrioutomo-arch"
+            target="_blank"
+            class="hover:underline"
+          >
+            github.com/pandegalihsatrioutomo-arch
+          </a>
+        </div>
+
+        <div>
+          <p class="text-xs tracking-widest mb-2">INSTAGRAM</p>
+          <a
             href="https://www.instagram.com/galih__satrio/"
             target="_blank"
             rel="noopener noreferrer"
             class="hover:underline"
-            >
+          >
             @galih__satrio
-            </a>
-          </div>
-
+          </a>
         </div>
 
       </div>
 
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const closeBtn = document.getElementById("closeBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.remove("opacity-0", "pointer-events-none");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    mobileMenu.classList.add("opacity-0", "pointer-events-none");
+  });
+</script>
 
 </body>
 </html>

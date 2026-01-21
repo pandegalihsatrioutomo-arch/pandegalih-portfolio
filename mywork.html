@@ -34,105 +34,143 @@
   style="background-image: url('asset/BG.png');"
 >
 
-  <!-- NAVBAR -->
-  <nav
-    class="absolute top-6 left-1/2 -translate-x-1/2 z-30
-           flex gap-12 text-xs tracking-widest font-semibold"
-  >
-    <a href="index.html" class="hover:opacity-60">HOME</a>
-    <a href="about.html" class="hover:opacity-60">ABOUT</a>
-    <a href="mywork.html" class="opacity-100">MYWORK</a>
-    <a href="contact.html" class="hover:opacity-60">CONTACT</a>
-  </nav>
+<!-- ================= NAVBAR ================= -->
+<header class="absolute top-6 w-full z-40">
+  <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
 
-  <!-- MYWORK -->
-  <section class="pt-36 pb-28 px-6 sm:px-12">
-    <div
-      class="bg-white/85 max-w-6xl mx-auto
-             px-10 sm:px-20 py-20"
+    <!-- LOGO / NAME -->
+    <span class="text-xs tracking-widest font-semibold">
+      PANDE GALIH
+    </span>
+
+    <!-- DESKTOP NAV -->
+    <nav class="hidden sm:flex gap-12 text-xs tracking-widest font-semibold">
+      <a href="index.html" class="hover:opacity-60">HOME</a>
+      <a href="about.html" class="hover:opacity-60">ABOUT</a>
+      <a href="mywork.html" class="opacity-100">MYWORK</a>
+      <a href="contact.html" class="hover:opacity-60">CONTACT</a>
+    </nav>
+
+    <!-- BURGER BUTTON (MOBILE) -->
+    <button
+      id="menuBtn"
+      class="sm:hidden flex flex-col gap-1.5"
+      aria-label="Open menu"
     >
+      <span class="w-6 h-px bg-black"></span>
+      <span class="w-6 h-px bg-black"></span>
+      <span class="w-6 h-px bg-black"></span>
+    </button>
 
-      <!-- HEADER -->
-      <header class="max-w-xl mb-28">
-        <p class="text-xs tracking-widest mb-4">
-          SELECTED WORKS
-        </p>
-        <h1 class="text-3xl sm:text-5xl leading-tight">
-          My Work
-        </h1>
-        <p class="mt-6 text-sm sm:text-base leading-relaxed">
-          A selection of UI/UX and visual projects
-          crafted with a focus on clarity,
-          usability, and visual storytelling.
-        </p>
-      </header>
+  </div>
+</header>
 
-      <!-- GALLERY -->
-      <div class="grid grid-cols-12 gap-y-28 gap-x-8">
+<!-- ================= MOBILE MENU ================= -->
+<div
+  id="mobileMenu"
+  class="fixed inset-0 z-50 bg-white/95
+         flex flex-col items-center justify-center
+         gap-10 text-sm tracking-widest font-semibold
+         opacity-0 pointer-events-none transition duration-300"
+>
+  <button
+    id="closeBtn"
+    class="absolute top-6 right-6 text-xl"
+    aria-label="Close menu"
+  >
+    ✕
+  </button>
 
-        <!-- ITEM -->
-        <figure class="col-span-12 sm:col-span-7">
-          <div class="overflow-hidden">
-            <img
-              src="asset/project/project1.png"
-              alt="Project One"
-              class="w-full transition duration-500 ease-out
-                     hover:scale-105"
-            />
-          </div>
-          <figcaption class="mt-6 text-sm tracking-wide">
-            Project One — UI / UX Design
-          </figcaption>
-        </figure>
+  <a href="index.html">HOME</a>
+  <a href="about.html">ABOUT</a>
+  <a href="mywork.html">MYWORK</a>
+  <a href="contact.html">CONTACT</a>
+</div>
 
-        <!-- ITEM -->
-        <figure class="col-span-12 sm:col-span-4 sm:col-start-9 sm:mt-36">
-          <div class="overflow-hidden">
-            <img
-              src="asset/project/project2.png"
-              alt="Project Two"
-              class="w-full transition duration-500 ease-out
-                     hover:scale-105"
-            />
-          </div>
-          <figcaption class="mt-6 text-sm tracking-wide">
-            Project Two — Mobile Application
-          </figcaption>
-        </figure>
+<!-- ================= MYWORK ================= -->
+<section class="pt-36 pb-28 px-6 sm:px-12">
+  <div class="bg-white/85 max-w-6xl mx-auto px-10 sm:px-20 py-20">
 
-        <!-- ITEM -->
-        <figure class="col-span-12 sm:col-span-6 sm:col-start-4 sm:-mt-24">
-          <div class="overflow-hidden">
-            <img
-              src="asset/project/project3.png"
-              alt="Project Three"
-              class="w-full transition duration-500 ease-out
-                     hover:scale-105"
-            />
-          </div>
-          <figcaption class="mt-6 text-sm tracking-wide">
-            Project Three — Visual Exploration
-          </figcaption>
-        </figure>
+    <!-- HEADER -->
+    <header class="max-w-xl mb-28">
+      <p class="text-xs tracking-widest mb-4">SELECTED WORKS</p>
+      <h1 class="text-3xl sm:text-5xl leading-tight">My Work</h1>
+      <p class="mt-6 text-sm sm:text-base leading-relaxed">
+        A selection of UI/UX and visual projects
+        crafted with a focus on clarity,
+        usability, and visual storytelling.
+      </p>
+    </header>
 
-      </div>
+    <!-- GALLERY -->
+    <div class="grid grid-cols-1 sm:grid-cols-12 gap-y-28 gap-x-8">
 
-      <!-- CTA -->
-      <div class="mt-32 flex justify-center">
-        <a
-          href="https://github.com/pandegalihsatrioutomo-arch"
-          target="_blank"
-          class="px-12 py-3 border border-black
-                 text-xs tracking-widest
-                 hover:bg-black hover:text-white
-                 transition duration-300"
-        >
-          SEE MORE PROJECTS
-        </a>
-      </div>
+      <figure class="sm:col-span-7">
+        <div class="overflow-hidden">
+          <img src="asset/project/project1.png"
+               class="w-full transition duration-500 hover:scale-105"
+               alt="Project One">
+        </div>
+        <figcaption class="mt-6 text-sm tracking-wide">
+          Project One — UI / UX Design
+        </figcaption>
+      </figure>
+
+      <figure class="sm:col-span-4 sm:col-start-9 sm:mt-36">
+        <div class="overflow-hidden">
+          <img src="asset/project/project2.png"
+               class="w-full transition duration-500 hover:scale-105"
+               alt="Project Two">
+        </div>
+        <figcaption class="mt-6 text-sm tracking-wide">
+          Project Two — Mobile Application
+        </figcaption>
+      </figure>
+
+      <figure class="sm:col-span-6 sm:col-start-4 sm:-mt-24">
+        <div class="overflow-hidden">
+          <img src="asset/project/project3.png"
+               class="w-full transition duration-500 hover:scale-105"
+               alt="Project Three">
+        </div>
+        <figcaption class="mt-6 text-sm tracking-wide">
+          Project Three — Visual Exploration
+        </figcaption>
+      </figure>
 
     </div>
-  </section>
+
+    <!-- CTA -->
+    <div class="mt-32 flex justify-center">
+      <a
+        href="https://github.com/pandegalihsatrioutomo-arch"
+        target="_blank"
+        class="px-12 py-3 border border-black
+               text-xs tracking-widest
+               hover:bg-black hover:text-white
+               transition"
+      >
+        SEE MORE PROJECTS
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const closeBtn = document.getElementById("closeBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.remove("opacity-0", "pointer-events-none");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    mobileMenu.classList.add("opacity-0", "pointer-events-none");
+  });
+</script>
 
 </body>
 </html>
