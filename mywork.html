@@ -30,11 +30,11 @@
 </head>
 
 <body
-  class="min-h-screen bg-cover bg-center bg-no-repeat font-serif text-black"
+  class="min-h-screen bg-cover bg-center bg-no-repeat font-serif text-neutral-900"
   style="background-image: url('asset/BG.png');"
 >
 
-  <!-- NAVBAR (TIDAK IKUT SCROLL) -->
+  <!-- NAVBAR -->
   <nav
     class="absolute top-6 left-1/2 -translate-x-1/2 z-30
            flex gap-12 text-xs tracking-widest font-semibold"
@@ -45,74 +45,87 @@
     <a href="contact.html" class="hover:opacity-60">CONTACT</a>
   </nav>
 
-  <!-- MY WORK SECTION -->
-  <section class="pt-32 pb-24 px-6 sm:px-12">
-    <div class="bg-white/80 max-w-6xl mx-auto px-8 sm:px-16 py-16">
+  <!-- MYWORK -->
+  <section class="pt-36 pb-28 px-6 sm:px-12">
+    <div
+      class="bg-white/85 max-w-6xl mx-auto
+             px-10 sm:px-20 py-20"
+    >
 
       <!-- HEADER -->
-      <div class="mb-24 max-w-xl">
+      <header class="max-w-xl mb-28">
         <p class="text-xs tracking-widest mb-4">
-          SELECTED PROJECTS
+          SELECTED WORKS
         </p>
         <h1 class="text-3xl sm:text-5xl leading-tight">
           My Work
         </h1>
         <p class="mt-6 text-sm sm:text-base leading-relaxed">
-          A curated selection of UI/UX and visual projects
-          that reflect my design thinking and visual exploration.
+          A selection of UI/UX and visual projects
+          crafted with a focus on clarity,
+          usability, and visual storytelling.
         </p>
-      </div>
+      </header>
 
-      <!-- GALLERY (ABSTRACT / EDITORIAL) -->
-      <div class="grid grid-cols-12 gap-y-24 gap-x-6">
+      <!-- GALLERY -->
+      <div class="grid grid-cols-12 gap-y-28 gap-x-8">
 
-        <!-- PROJECT 1 -->
-        <div class="col-span-12 sm:col-span-7">
-          <img
-            src="asset/project/project1.png"
-            alt="Project 1"
-            class="w-full object-cover transition hover:scale-[1.02]"
-          />
-          <p class="mt-4 text-sm tracking-wide">
+        <!-- ITEM -->
+        <figure class="col-span-12 sm:col-span-7">
+          <div class="overflow-hidden">
+            <img
+              src="asset/project/project1.png"
+              alt="Project One"
+              class="w-full transition duration-500 ease-out
+                     hover:scale-105"
+            />
+          </div>
+          <figcaption class="mt-6 text-sm tracking-wide">
             Project One — UI / UX Design
-          </p>
-        </div>
+          </figcaption>
+        </figure>
 
-        <!-- PROJECT 2 -->
-        <div class="col-span-12 sm:col-span-4 sm:col-start-9 sm:mt-32">
-          <img
-            src="asset/project/project2.png"
-            alt="Project 2"
-            class="w-full object-cover transition hover:scale-[1.02]"
-          />
-          <p class="mt-4 text-sm tracking-wide">
-            Project Two — Mobile App
-          </p>
-        </div>
+        <!-- ITEM -->
+        <figure class="col-span-12 sm:col-span-4 sm:col-start-9 sm:mt-36">
+          <div class="overflow-hidden">
+            <img
+              src="asset/project/project2.png"
+              alt="Project Two"
+              class="w-full transition duration-500 ease-out
+                     hover:scale-105"
+            />
+          </div>
+          <figcaption class="mt-6 text-sm tracking-wide">
+            Project Two — Mobile Application
+          </figcaption>
+        </figure>
 
-        <!-- PROJECT 3 -->
-        <div class="col-span-12 sm:col-span-6 sm:col-start-4 sm:-mt-20">
-          <img
-            src="asset/project/project3.png"
-            alt="Project 3"
-            class="w-full object-cover transition hover:scale-[1.02]"
-          />
-          <p class="mt-4 text-sm tracking-wide">
-            Project Three — Visual Concept
-          </p>
-        </div>
+        <!-- ITEM -->
+        <figure class="col-span-12 sm:col-span-6 sm:col-start-4 sm:-mt-24">
+          <div class="overflow-hidden">
+            <img
+              src="asset/project/project3.png"
+              alt="Project Three"
+              class="w-full transition duration-500 ease-out
+                     hover:scale-105"
+            />
+          </div>
+          <figcaption class="mt-6 text-sm tracking-wide">
+            Project Three — Visual Exploration
+          </figcaption>
+        </figure>
 
       </div>
 
-      <!-- SEE MORE -->
-      <div class="mt-28 flex justify-center">
+      <!-- CTA -->
+      <div class="mt-32 flex justify-center">
         <a
           href="https://github.com/pandegalihsatrioutomo-arch"
           target="_blank"
-          class="px-10 py-3 border border-black
+          class="px-12 py-3 border border-black
                  text-xs tracking-widest
                  hover:bg-black hover:text-white
-                 transition"
+                 transition duration-300"
         >
           SEE MORE PROJECTS
         </a>
