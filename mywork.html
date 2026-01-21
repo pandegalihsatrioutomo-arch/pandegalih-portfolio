@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Work | Pande Galih</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ["Playfair Display", "serif"],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body
+  class="min-h-screen bg-cover bg-center bg-no-repeat font-serif"
+  style="background-image: url('asset/BG.png');"
+>
+
+  <!-- NAVBAR (TIDAK IKUT SCROLL) -->
+  <nav
+    class="absolute top-6 left-1/2 -translate-x-1/2 z-30
+           flex flex-col sm:flex-row items-center
+           gap-4 sm:gap-14
+           text-xs sm:text-sm
+           font-semibold
+           tracking-widest
+           text-black"
+  >
+    <a href="index.html" class="hover:opacity-60">HOME</a>
+    <a href="about.html" class="hover:opacity-60">ABOUT</a>
+    <a href="mywork.html" class="opacity-100">MYWORK</a>
+    <a href="contact.html" class="hover:opacity-60">CONTACT</a>
+  </nav>
+
+  <!-- MY WORK -->
+  <section class="min-h-screen pt-32 px-4 sm:px-10">
+    <div
+      class="bg-white/80 max-w-6xl mx-auto
+             px-8 sm:px-16 py-12 sm:py-16"
+    >
+
+      <!-- TITLE -->
+      <div class="mb-20">
+        <p class="text-xs tracking-widest mb-3">
+          SELECTED WORKS
+        </p>
+        <h1 class="text-2xl sm:text-4xl">
+          Visual Exploration
+        </h1>
+      </div>
+
+      <!-- ABSTRACT GALLERY -->
+      <div class="grid grid-cols-12 gap-y-24 gap-x-6">
+
+        <!-- PROJECT 1 -->
+        <div class="col-span-12 sm:col-span-7">
+          <img
+            src="asset/project/project1.png"
+            alt="Project 1"
+            class="w-full object-cover"
+          />
+          <p class="mt-4 text-sm tracking-wide">
+            Project One
+          </p>
+        </div>
+
+        <!-- PROJECT 2 -->
+        <div class="col-span-12 sm:col-span-4 sm:col-start-9 sm:mt-28">
+          <img
+            src="asset/project/project2.png"
+            alt="Project 2"
+            class="w-full object-cover"
+          />
+          <p class="mt-4 text-sm tracking-wide">
+            Project Two
+          </p>
+        </div>
+
+        <!-- PROJECT 3 -->
+        <div class="col-span-12 sm:col-span-6 sm:col-start-4 sm:-mt-20">
+          <img
+            src="asset/project/project3.png"
+            alt="Project 3"
+            class="w-full object-cover"
+          />
+          <p class="mt-4 text-sm tracking-wide">
+            Project Three
+          </p>
+        </div>
+
+      </div>
+
+      <!-- SEE MORE BUTTON -->
+      <div class="mt-24 flex justify-center">
+        <a
+          href="https://github.com/pandegalihsatrioutomo-arch"
+          target="_blank"
+          class="px-10 py-3
+                 border border-black
+                 text-xs tracking-widest
+                 hover:bg-black hover:text-white
+                 transition duration-300"
+        >
+          SEE MORE
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

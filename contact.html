@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Pande Galih</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ["Playfair Display", "serif"],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body
+  class="min-h-screen bg-cover bg-center bg-no-repeat font-serif"
+  style="background-image: url('asset/BG.png');"
+>
+
+  <!-- NAVBAR (STATIC, TIDAK IKUT SCROLL) -->
+  <nav
+    class="absolute top-6 left-1/2 -translate-x-1/2 z-30
+           flex flex-col sm:flex-row items-center
+           gap-4 sm:gap-14
+           text-xs sm:text-sm
+           font-semibold
+           tracking-widest
+           text-black"
+  >
+    <a href="index.html" class="hover:opacity-60">HOME</a>
+    <a href="about.html" class="hover:opacity-60">ABOUT</a>
+    <a href="mywork.html" class="hover:opacity-60">MYWORK</a>
+    <a href="contact.html" class="opacity-100">CONTACT</a>
+  </nav>
+
+  <!-- CONTACT SECTION -->
+  <section class="min-h-screen pt-32 px-4 sm:px-10 flex items-center">
+    <div
+      class="bg-white/80 max-w-4xl mx-auto
+             px-8 sm:px-16 py-14 sm:py-20 w-full"
+    >
+
+      <!-- TITLE -->
+      <div class="mb-14">
+        <p class="text-xs tracking-widest mb-3">
+          GET IN TOUCH
+        </p>
+        <h1 class="text-2xl sm:text-4xl leading-snug">
+          Let’s work<br />together
+        </h1>
+      </div>
+
+      <!-- CONTENT -->
+      <div class="max-w-xl">
+        <p class="text-sm sm:text-lg leading-relaxed mb-10">
+          If you are interested in collaborating, working together,
+          or just want to say hello — feel free to reach out.
+        </p>
+
+        <!-- CONTACT INFO -->
+        <div class="space-y-6 text-sm sm:text-base">
+
+          <div>
+            <p class="tracking-widest text-xs mb-1">EMAIL</p>
+            <a
+              href="mailto:pandegalihsatrioutomo@gmail.com"
+              class="hover:underline"
+            >
+              pandegalihsatrioutomo@gmail.com
+            </a>
+          </div>
+
+          <div>
+            <p class="tracking-widest text-xs mb-1">GITHUB</p>
+            <a
+              href="https://github.com/pandegalihsatrioutomo-arch"
+              target="_blank"
+              class="hover:underline"
+            >
+              github.com/pandegalihsatrioutomo-arch
+            </a>
+          </div>
+
+          <div>
+            <p class="tracking-widest text-xs mb-1">INSTAGRAM</p>
+           <a
+            href="https://www.instagram.com/galih__satrio/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:underline"
+            >
+            @galih__satrio
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
