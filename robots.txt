@@ -1,0 +1,14 @@
+# Robots.txt for Pande Galih Portfolio
+# https://pandegalih.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://pandegalih.com/sitemap.xml
+
+# Disallow patterns folder (decorative assets)
+Disallow: /asset/patterns/
+
+# Disallow plans folder (development docs)
+Disallow: /plans/

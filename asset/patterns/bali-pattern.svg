@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+  <defs>
+    <pattern id="baliPattern" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
+      <!-- Patra Punggel inspired - curling leaf motif -->
+      <g fill="none" stroke="#C9A227" stroke-width="0.5" opacity="0.15">
+        <!-- Central flower -->
+        <circle cx="25" cy="25" r="3"/>
+        <circle cx="25" cy="25" r="6"/>
+        
+        <!-- Petals/leaves curling outward -->
+        <path d="M25 19 Q28 15 25 10 Q22 15 25 19"/>
+        <path d="M25 31 Q28 35 25 40 Q22 35 25 31"/>
+        <path d="M19 25 Q15 22 10 25 Q15 28 19 25"/>
+        <path d="M31 25 Q35 22 40 25 Q35 28 31 25"/>
+        
+        <!-- Diagonal curls -->
+        <path d="M20 20 Q15 15 12 12"/>
+        <path d="M30 20 Q35 15 38 12"/>
+        <path d="M20 30 Q15 35 12 38"/>
+        <path d="M30 30 Q35 35 38 38"/>
+        
+        <!-- Small decorative dots -->
+        <circle cx="12" cy="12" r="1"/>
+        <circle cx="38" cy="12" r="1"/>
+        <circle cx="12" cy="38" r="1"/>
+        <circle cx="38" cy="38" r="1"/>
+      </g>
+    </pattern>
+  </defs>
+  <rect width="100" height="100" fill="url(#baliPattern)"/>
+</svg>

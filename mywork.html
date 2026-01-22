@@ -1,176 +1,319 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Work | Pande Galih</title>
-
-  <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap"
-    rel="stylesheet"
-  />
-
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            serif: ["Playfair Display", "serif"],
-          },
-        },
-      },
-    };
-  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Work | Pande Galih - UI/UX Designer & Photographer</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Explore the portfolio of Pande Galih Satrio Utomo - A collection of UI/UX design and photography projects crafted with focus on clarity and visual storytelling.">
+  <meta name="keywords" content="UI/UX Design, Photography, Portfolio, Projects, Web Design, Mobile Design, Visual Design">
+  <meta name="author" content="Pande Galih Satrio Utomo">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="My Work - Pande Galih">
+  <meta property="og:description" content="A collection of UI/UX design and photography projects.">
+  <meta property="og:image" content="asset/project/project1.png">
+  <meta property="og:url" content="https://pandegalih.com/mywork">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="My Work - Pande Galih">
+  <meta name="twitter:description" content="A collection of UI/UX design and photography projects.">
+  <meta name="twitter:image" content="asset/project/project1.png">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
+  
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body
-  class="min-h-screen bg-cover bg-center bg-no-repeat font-serif text-neutral-900"
-  style="background-image: url('asset/BG.png');"
->
+<body>
+  <!-- Skip Link for Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<!-- ================= NAVBAR ================= -->
-<header class="absolute top-6 w-full z-40">
-  <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar" role="banner">
+    <div class="container">
+      <nav class="navbar__inner" role="navigation" aria-label="Main navigation">
+        <!-- Logo -->
+        <a href="index.html" class="navbar__logo" aria-label="Pande Galih - Home">
+          PANDE GALIH
+        </a>
 
-    <!-- LOGO / NAME -->
-    <span class="text-xs tracking-widest font-semibold">
-      PANDE GALIH
-    </span>
+        <!-- Desktop Navigation -->
+        <ul class="navbar__menu">
+          <li><a href="index.html" class="navbar__link">Home</a></li>
+          <li><a href="about.html" class="navbar__link">About</a></li>
+          <li><a href="mywork.html" class="navbar__link navbar__link--active" aria-current="page">Work</a></li>
+          <li><a href="contact.html" class="navbar__link">Contact</a></li>
+        </ul>
 
-    <!-- DESKTOP NAV -->
-    <nav class="hidden sm:flex gap-12 text-xs tracking-widest font-semibold">
-      <a href="index.html" class="hover:opacity-60">HOME</a>
-      <a href="about.html" class="hover:opacity-60">ABOUT</a>
-      <a href="mywork.html" class="opacity-100">MYWORK</a>
-      <a href="contact.html" class="hover:opacity-60">CONTACT</a>
-    </nav>
+        <!-- Mobile Menu Toggle -->
+        <button 
+          id="menuBtn" 
+          class="navbar__toggle" 
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <span class="navbar__toggle-line"></span>
+          <span class="navbar__toggle-line"></span>
+          <span class="navbar__toggle-line"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
 
-    <!-- BURGER BUTTON (MOBILE) -->
-    <button
-      id="menuBtn"
-      class="sm:hidden flex flex-col gap-1.5"
-      aria-label="Open menu"
-    >
-      <span class="w-6 h-px bg-black"></span>
-      <span class="w-6 h-px bg-black"></span>
-      <span class="w-6 h-px bg-black"></span>
+  <!-- ================= MOBILE MENU ================= -->
+  <div id="mobileMenu" class="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <button id="closeBtn" class="mobile-menu__close" aria-label="Close navigation menu">
+      ✕
     </button>
-
+    <a href="index.html" class="mobile-menu__link">Home</a>
+    <a href="about.html" class="mobile-menu__link">About</a>
+    <a href="mywork.html" class="mobile-menu__link">Work</a>
+    <a href="contact.html" class="mobile-menu__link">Contact</a>
   </div>
-</header>
 
-<!-- ================= MOBILE MENU ================= -->
-<div
-  id="mobileMenu"
-  class="fixed inset-0 z-50 bg-white/95
-         flex flex-col items-center justify-center
-         gap-10 text-sm tracking-widest font-semibold
-         opacity-0 pointer-events-none transition duration-300"
->
-  <button
-    id="closeBtn"
-    class="absolute top-6 right-6 text-xl"
-    aria-label="Close menu"
-  >
-    ✕
-  </button>
+  <!-- ================= MAIN CONTENT ================= -->
+  <main id="main-content" role="main">
+    
+    <!-- ================= WORK SECTION ================= -->
+    <section class="work">
+      <!-- Background Pattern -->
+      <div class="hero__background">
+        <img 
+          src="asset/BG.png" 
+          alt="" 
+          class="hero__background-image"
+          loading="eager"
+        >
+        <div class="hero__pattern" aria-hidden="true"></div>
+      </div>
 
-  <a href="index.html">HOME</a>
-  <a href="about.html">ABOUT</a>
-  <a href="mywork.html">MYWORK</a>
-  <a href="contact.html">CONTACT</a>
-</div>
+      <div class="container">
+        <div class="work__card animate-fade-in-up">
+          
+          <!-- Header -->
+          <header class="work__header">
+            <p class="label label--gold animate-fade-in-up">Selected Works</p>
+            <h1 class="animate-fade-in-up">My Work</h1>
+            <p class="work__description animate-fade-in-up">
+              A selection of UI/UX and visual projects crafted with a focus on 
+              clarity, usability, and visual storytelling.
+            </p>
+          </header>
 
-<!-- ================= MYWORK ================= -->
-<section class="pt-36 pb-28 px-6 sm:px-12">
-  <div class="bg-white/85 max-w-6xl mx-auto px-10 sm:px-20 py-20">
+          <!-- Project Gallery -->
+          <div class="work__grid">
+            
+            <!-- Project 1 - Large -->
+            <article class="work__item work__item--large animate-fade-in-up">
+              <a href="#" class="work__item-link" aria-label="View Project One details">
+                <div class="work__item-image-wrapper">
+                  <img 
+                    src="asset/project/project1.png" 
+                    alt="Project One - UI/UX Design project showcasing modern interface design"
+                    class="work__item-image"
+                    loading="lazy"
+                  >
+                  <div class="work__item-overlay">
+                    <span class="work__item-view">View Project</span>
+                  </div>
+                </div>
+              </a>
+              <div class="work__item-info">
+                <h2 class="work__item-title">Project One</h2>
+                <p class="work__item-category">UI / UX Design</p>
+              </div>
+            </article>
 
-    <!-- HEADER -->
-    <header class="max-w-xl mb-28">
-      <p class="text-xs tracking-widest mb-4">SELECTED WORKS</p>
-      <h1 class="text-3xl sm:text-5xl leading-tight">My Work</h1>
-      <p class="mt-6 text-sm sm:text-base leading-relaxed">
-        A selection of UI/UX and visual projects
-        crafted with a focus on clarity,
-        usability, and visual storytelling.
+            <!-- Project 2 - Small -->
+            <article class="work__item work__item--small animate-fade-in-up">
+              <a href="#" class="work__item-link" aria-label="View Project Two details">
+                <div class="work__item-image-wrapper">
+                  <img 
+                    src="asset/project/project2.png" 
+                    alt="Project Two - Community documentary photography project"
+                    class="work__item-image"
+                    loading="lazy"
+                  >
+                  <div class="work__item-overlay">
+                    <span class="work__item-view">View Project</span>
+                  </div>
+                </div>
+              </a>
+              <div class="work__item-info">
+                <h2 class="work__item-title">Project Two</h2>
+                <p class="work__item-category">Community Documentaries</p>
+              </div>
+            </article>
+
+            <!-- Project 3 - Medium -->
+            <article class="work__item work__item--medium animate-fade-in-up">
+              <a href="#" class="work__item-link" aria-label="View Project Three details">
+                <div class="work__item-image-wrapper">
+                  <img 
+                    src="asset/project/project3.png" 
+                    alt="Project Three - Mobile visual exploration and design"
+                    class="work__item-image"
+                    loading="lazy"
+                  >
+                  <div class="work__item-overlay">
+                    <span class="work__item-view">View Project</span>
+                  </div>
+                </div>
+              </a>
+              <div class="work__item-info">
+                <h2 class="work__item-title">Project Three</h2>
+                <p class="work__item-category">Mobile Visual Exploration</p>
+              </div>
+            </article>
+
+          </div>
+
+          <!-- CTA -->
+          <div class="work__cta animate-fade-in-up">
+            <p class="work__cta-text">Want to see more projects?</p>
+            <a 
+              href="https://github.com/pandegalihsatrioutomo-arch" 
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn--primary"
+            >
+              See More on GitHub
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <p class="footer__text">
+        © 2024 Pande Galih. Crafted with <span class="footer__heart">♥</span> in Bali
       </p>
-    </header>
-
-    <!-- GALLERY -->
-    <div class="grid grid-cols-1 sm:grid-cols-12 gap-y-28 gap-x-8">
-
-      <figure class="sm:col-span-7">
-        <div class="overflow-hidden">
-          <img src="asset/project/project1.png"
-               class="w-full transition duration-500 hover:scale-105"
-               alt="Project One">
-        </div>
-        <figcaption class="mt-6 text-sm tracking-wide">
-          Project One — UI / UX Design
-        </figcaption>
-      </figure>
-
-      <figure class="sm:col-span-4 sm:col-start-9 sm:mt-36">
-        <div class="overflow-hidden">
-          <img src="asset/project/project2.png"
-               class="w-full transition duration-500 hover:scale-105"
-               alt="Project Two">
-        </div>
-        <figcaption class="mt-6 text-sm tracking-wide">
-          Project Two — Community Documentaries
-        </figcaption>
-      </figure>
-
-      <figure class="sm:col-span-6 sm:col-start-4 sm:-mt-24">
-        <div class="overflow-hidden">
-          <img src="asset/project/project3.png"
-               class="w-full transition duration-500 hover:scale-105"
-               alt="Project Three">
-        </div>
-        <figcaption class="mt-6 text-sm tracking-wide">
-          Project Three — Mobile Visual Exploration
-        </figcaption>
-      </figure>
-
     </div>
+  </footer>
 
-    <!-- CTA -->
-    <div class="mt-32 flex justify-center">
-      <a
-        href="https://github.com/pandegalihsatrioutomo-arch"
-        target="_blank"
-        class="px-12 py-3 border border-black
-               text-xs tracking-widest
-               hover:bg-black hover:text-white
-               transition"
-      >
-        SEE MORE PROJECTS
-      </a>
-    </div>
-
-  </div>
-</section>
-
-<!-- ================= SCRIPT ================= -->
-<script>
-  const menuBtn = document.getElementById("menuBtn");
-  const closeBtn = document.getElementById("closeBtn");
-  const mobileMenu = document.getElementById("mobileMenu");
-
-  menuBtn.addEventListener("click", () => {
-    mobileMenu.classList.remove("opacity-0", "pointer-events-none");
-  });
-
-  closeBtn.addEventListener("click", () => {
-    mobileMenu.classList.add("opacity-0", "pointer-events-none");
-  });
-</script>
-
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+  
+  <!-- Additional inline styles for work page -->
+  <style>
+    .work {
+      position: relative;
+      min-height: 100vh;
+      padding-top: 8rem;
+      padding-bottom: 4rem;
+    }
+    
+    .work__description {
+      font-size: var(--text-lg);
+      color: var(--color-gray);
+      margin-top: var(--space-md);
+      max-width: 500px;
+    }
+    
+    .work__item-image-wrapper {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .work__item-link {
+      display: block;
+    }
+    
+    .work__item-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(26, 26, 26, 0.8), rgba(26, 26, 26, 0.2));
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding-bottom: var(--space-lg);
+      opacity: 0;
+      transition: opacity var(--transition-base);
+    }
+    
+    .work__item:hover .work__item-overlay {
+      opacity: 1;
+    }
+    
+    .work__item-view {
+      color: var(--color-white);
+      font-size: var(--text-sm);
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: var(--space-sm) var(--space-md);
+      border: 1px solid var(--color-white);
+      transition: all var(--transition-fast);
+    }
+    
+    .work__item:hover .work__item-view {
+      background: var(--color-gold);
+      border-color: var(--color-gold);
+    }
+    
+    .work__cta {
+      text-align: center;
+      padding-top: var(--space-xl);
+      border-top: 1px solid var(--color-sand);
+    }
+    
+    .work__cta-text {
+      font-size: var(--text-lg);
+      color: var(--color-gray);
+      margin-bottom: var(--space-md);
+    }
+    
+    /* Grid Layout for Projects */
+    @media (min-width: 640px) {
+      .work__grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: var(--space-lg);
+        row-gap: var(--space-xl);
+      }
+      
+      .work__item--large {
+        grid-column: span 7;
+      }
+      
+      .work__item--small {
+        grid-column: 9 / span 4;
+        margin-top: var(--space-3xl);
+      }
+      
+      .work__item--medium {
+        grid-column: 4 / span 6;
+        margin-top: calc(var(--space-xl) * -1);
+      }
+    }
+    
+    @media (max-width: 639px) {
+      .work__grid {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-xl);
+      }
+    }
+  </style>
 </body>
 </html>

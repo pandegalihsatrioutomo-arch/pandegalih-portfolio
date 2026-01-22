@@ -1,163 +1,357 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | Pande Galih</title>
-
-  <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap"
-    rel="stylesheet"
-  />
-
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            serif: ["Playfair Display", "serif"],
-          },
-        },
-      },
-    };
-  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Pande Galih - UI/UX Designer & Photographer</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Get in touch with Pande Galih Satrio Utomo - UI/UX Designer and Photographer based in Bali. Let's collaborate on your next project.">
+  <meta name="keywords" content="Contact, Hire, UI/UX Designer, Photographer, Bali, Collaboration, Freelance">
+  <meta name="author" content="Pande Galih Satrio Utomo">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact - Pande Galih">
+  <meta property="og:description" content="Let's work together on your next project.">
+  <meta property="og:image" content="asset/profil1.jpg">
+  <meta property="og:url" content="https://pandegalih.com/contact">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact - Pande Galih">
+  <meta name="twitter:description" content="Let's work together on your next project.">
+  <meta name="twitter:image" content="asset/profil1.jpg">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
+  
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body
-  class="min-h-screen bg-cover bg-center bg-no-repeat font-serif text-neutral-900"
-  style="background-image: url('asset/BG.png');"
->
+<body>
+  <!-- Skip Link for Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<!-- ================= NAVBAR ================= -->
-<header class="absolute top-6 w-full z-40">
-  <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar" role="banner">
+    <div class="container">
+      <nav class="navbar__inner" role="navigation" aria-label="Main navigation">
+        <!-- Logo -->
+        <a href="index.html" class="navbar__logo" aria-label="Pande Galih - Home">
+          PANDE GALIH
+        </a>
 
-    <!-- NAME -->
-    <span class="text-xs tracking-widest font-semibold">
-      PANDE GALIH
-    </span>
+        <!-- Desktop Navigation -->
+        <ul class="navbar__menu">
+          <li><a href="index.html" class="navbar__link">Home</a></li>
+          <li><a href="about.html" class="navbar__link">About</a></li>
+          <li><a href="mywork.html" class="navbar__link">Work</a></li>
+          <li><a href="contact.html" class="navbar__link navbar__link--active" aria-current="page">Contact</a></li>
+        </ul>
 
-    <!-- DESKTOP NAV -->
-    <nav class="hidden sm:flex gap-12 text-xs tracking-widest font-semibold">
-      <a href="index.html" class="hover:opacity-60">HOME</a>
-      <a href="about.html" class="hover:opacity-60">ABOUT</a>
-      <a href="mywork.html" class="hover:opacity-60">MYWORK</a>
-      <a href="contact.html" class="opacity-100">CONTACT</a>
-    </nav>
+        <!-- Mobile Menu Toggle -->
+        <button 
+          id="menuBtn" 
+          class="navbar__toggle" 
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <span class="navbar__toggle-line"></span>
+          <span class="navbar__toggle-line"></span>
+          <span class="navbar__toggle-line"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
 
-    <!-- BURGER -->
-    <button id="menuBtn" class="sm:hidden flex flex-col gap-1.5">
-      <span class="w-6 h-px bg-black"></span>
-      <span class="w-6 h-px bg-black"></span>
-      <span class="w-6 h-px bg-black"></span>
+  <!-- ================= MOBILE MENU ================= -->
+  <div id="mobileMenu" class="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <button id="closeBtn" class="mobile-menu__close" aria-label="Close navigation menu">
+      ✕
     </button>
-
+    <a href="index.html" class="mobile-menu__link">Home</a>
+    <a href="about.html" class="mobile-menu__link">About</a>
+    <a href="mywork.html" class="mobile-menu__link">Work</a>
+    <a href="contact.html" class="mobile-menu__link">Contact</a>
   </div>
-</header>
 
-<!-- ================= MOBILE MENU ================= -->
-<div
-  id="mobileMenu"
-  class="fixed inset-0 z-50 bg-white/95
-         flex flex-col items-center justify-center
-         gap-10 text-sm tracking-widest font-semibold
-         opacity-0 pointer-events-none transition duration-300"
->
-  <button id="closeBtn" class="absolute top-6 right-6 text-xl">✕</button>
-
-  <a href="index.html">HOME</a>
-  <a href="about.html">ABOUT</a>
-  <a href="mywork.html">MYWORK</a>
-  <a href="contact.html">CONTACT</a>
-</div>
-
-<!-- ================= CONTACT ================= -->
-<section class="min-h-screen flex items-center px-6 sm:px-12 pt-32">
-  <div
-    class="bg-white/80 max-w-5xl mx-auto w-full
-           px-10 sm:px-20 py-16"
-  >
-
-    <div class="max-w-xl">
-
-      <!-- HEADER -->
-      <p class="text-xs tracking-widest mb-6">
-        GET IN TOUCH
-      </p>
-
-      <h1 class="text-3xl sm:text-5xl leading-tight mb-8">
-        Let’s work<br />
-        together
-      </h1>
-
-      <p class="text-sm sm:text-lg leading-relaxed mb-14">
-        If you’re interested in collaborating,
-        discussing a project, or just saying hello,
-        feel free to reach out anytime.
-      </p>
-
-      <!-- CONTACT LIST -->
-      <div class="space-y-10 text-sm sm:text-base">
-
-        <div>
-          <p class="text-xs tracking-widest mb-2">EMAIL</p>
-          <a
-            href="mailto:pandegalihsatrioutomo@gmail.com"
-            class="hover:underline"
-          >
-            pandegalihsatrioutomo@gmail.com
-          </a>
-        </div>
-
-        <div>
-          <p class="text-xs tracking-widest mb-2">GITHUB</p>
-          <a
-            href="https://github.com/pandegalihsatrioutomo-arch"
-            target="_blank"
-            class="hover:underline"
-          >
-            github.com/pandegalihsatrioutomo-arch
-          </a>
-        </div>
-
-        <div>
-          <p class="text-xs tracking-widest mb-2">INSTAGRAM</p>
-          <a
-            href="https://www.instagram.com/galih__satrio/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="hover:underline"
-          >
-            @galih__satrio
-          </a>
-        </div>
-
+  <!-- ================= MAIN CONTENT ================= -->
+  <main id="main-content" role="main">
+    
+    <!-- ================= CONTACT SECTION ================= -->
+    <section class="contact">
+      <!-- Background Pattern -->
+      <div class="hero__background">
+        <img 
+          src="asset/BG.png" 
+          alt="" 
+          class="hero__background-image"
+          loading="eager"
+        >
+        <div class="hero__pattern" aria-hidden="true"></div>
       </div>
 
+      <div class="container">
+        <div class="contact__card animate-fade-in-up">
+          
+          <!-- Header -->
+          <header class="contact__header">
+            <p class="label label--gold animate-fade-in-up">Get In Touch</p>
+            <h1 class="contact__title animate-fade-in-up">
+              Let's work<br>together
+            </h1>
+            <p class="contact__subtitle animate-fade-in-up">
+              If you're interested in collaborating, discussing a project, 
+              or just saying hello, feel free to reach out anytime.
+            </p>
+          </header>
+
+          <!-- Contact Information -->
+          <div class="contact__content">
+            <div class="contact__list animate-stagger">
+              
+              <!-- Email -->
+              <div class="contact__item">
+                <div class="contact__item-icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                </div>
+                <div class="contact__item-content">
+                  <p class="contact__item-label">Email</p>
+                  <a 
+                    href="mailto:pandegalihsatrioutomo@gmail.com" 
+                    class="contact__item-link"
+                  >
+                    pandegalihsatrioutomo@gmail.com
+                  </a>
+                </div>
+              </div>
+
+              <!-- GitHub -->
+              <div class="contact__item">
+                <div class="contact__item-icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                  </svg>
+                </div>
+                <div class="contact__item-content">
+                  <p class="contact__item-label">GitHub</p>
+                  <a 
+                    href="https://github.com/pandegalihsatrioutomo-arch" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact__item-link"
+                  >
+                    github.com/pandegalihsatrioutomo-arch
+                  </a>
+                </div>
+              </div>
+
+              <!-- Instagram -->
+              <div class="contact__item">
+                <div class="contact__item-icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                  </svg>
+                </div>
+                <div class="contact__item-content">
+                  <p class="contact__item-label">Instagram</p>
+                  <a 
+                    href="https://www.instagram.com/galih__satrio/" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact__item-link"
+                  >
+                    @galih__satrio
+                  </a>
+                </div>
+              </div>
+
+              <!-- Location -->
+              <div class="contact__item">
+                <div class="contact__item-icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                </div>
+                <div class="contact__item-content">
+                  <p class="contact__item-label">Location</p>
+                  <p class="contact__item-text">Bali, Indonesia</p>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Availability Status -->
+            <div class="contact__availability animate-fade-in-up">
+              <div class="contact__availability-indicator"></div>
+              <p>Currently available for freelance projects</p>
+            </div>
+          </div>
+
+          <!-- Decorative Pattern -->
+          <div class="contact__decoration animate-fade-in" aria-hidden="true">
+            <div class="contact__decoration-pattern"></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <p class="footer__text">
+        © 2024 Pande Galih. Crafted with <span class="footer__heart">♥</span> in Bali
+      </p>
     </div>
-  </div>
-</section>
+  </footer>
 
-<!-- ================= SCRIPT ================= -->
-<script>
-  const menuBtn = document.getElementById("menuBtn");
-  const closeBtn = document.getElementById("closeBtn");
-  const mobileMenu = document.getElementById("mobileMenu");
-
-  menuBtn.addEventListener("click", () => {
-    mobileMenu.classList.remove("opacity-0", "pointer-events-none");
-  });
-
-  closeBtn.addEventListener("click", () => {
-    mobileMenu.classList.add("opacity-0", "pointer-events-none");
-  });
-</script>
-
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+  
+  <!-- Additional inline styles for contact page -->
+  <style>
+    .contact {
+      position: relative;
+      min-height: 100vh;
+      padding-top: 8rem;
+      padding-bottom: 4rem;
+    }
+    
+    .contact__content {
+      margin-top: var(--space-xl);
+    }
+    
+    .contact__item {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-md);
+      padding: var(--space-md) 0;
+      border-bottom: 1px solid var(--color-sand);
+    }
+    
+    .contact__item:last-child {
+      border-bottom: none;
+    }
+    
+    .contact__item-icon {
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--color-sand);
+      border-radius: var(--radius-md);
+      color: var(--color-gold);
+    }
+    
+    .contact__item-content {
+      flex: 1;
+    }
+    
+    .contact__item-label {
+      font-size: var(--text-xs);
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-gold);
+      margin-bottom: var(--space-xs);
+    }
+    
+    .contact__item-link {
+      font-size: var(--text-lg);
+      color: var(--color-black);
+      transition: color var(--transition-fast);
+      word-break: break-word;
+    }
+    
+    .contact__item-link:hover {
+      color: var(--color-gold);
+    }
+    
+    .contact__item-text {
+      font-size: var(--text-lg);
+      color: var(--color-black);
+    }
+    
+    .contact__availability {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      margin-top: var(--space-xl);
+      padding: var(--space-md);
+      background: var(--color-sand);
+      border-radius: var(--radius-md);
+    }
+    
+    .contact__availability-indicator {
+      width: 12px;
+      height: 12px;
+      background: #22c55e;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      50% {
+        opacity: 0.7;
+        transform: scale(1.1);
+      }
+    }
+    
+    .contact__availability p {
+      font-size: var(--text-sm);
+      color: var(--color-brown);
+      margin: 0;
+    }
+    
+    .contact__decoration {
+      margin-top: var(--space-3xl);
+      padding-top: var(--space-xl);
+      border-top: 1px solid var(--color-sand);
+    }
+    
+    .contact__decoration-pattern {
+      width: 100%;
+      max-width: 400px;
+      height: 60px;
+      margin: 0 auto;
+      background-image: url('asset/patterns/bali-pattern.svg');
+      background-size: contain;
+      background-repeat: repeat-x;
+      background-position: center;
+      opacity: 0.4;
+    }
+    
+    @media (min-width: 640px) {
+      .contact__item-link {
+        font-size: var(--text-xl);
+      }
+    }
+  </style>
 </body>
 </html>

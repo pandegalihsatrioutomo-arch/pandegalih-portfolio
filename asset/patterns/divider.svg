@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="20" viewBox="0 0 200 20">
+  <g fill="none" stroke="#C9A227" stroke-width="1">
+    <!-- Center ornament -->
+    <circle cx="100" cy="10" r="3"/>
+    <path d="M100 4 Q103 7 100 10 Q97 7 100 4"/>
+    <path d="M100 16 Q103 13 100 10 Q97 13 100 16"/>
+    
+    <!-- Left side -->
+    <line x1="10" y1="10" x2="85" y2="10"/>
+    <path d="M85 10 Q90 5 95 10"/>
+    
+    <!-- Right side -->
+    <line x1="115" y1="10" x2="190" y2="10"/>
+    <path d="M115 10 Q110 5 105 10"/>
+    
+    <!-- End ornaments -->
+    <circle cx="10" cy="10" r="2"/>
+    <circle cx="190" cy="10" r="2"/>
+  </g>
+</svg>

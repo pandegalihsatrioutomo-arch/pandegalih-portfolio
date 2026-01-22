@@ -1,159 +1,205 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio | Pande Galih</title>
-
-  <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap"
-    rel="stylesheet"
-  />
-
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            serif: ["Playfair Display", "serif"],
-          },
-        },
-      },
-    };
-  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Pande Galih - UI/UX Designer & Photographer</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Portfolio Pande Galih Satrio Utomo - UI/UX Designer and Photographer based in Bali, Indonesia. Crafting clean, meaningful digital experiences.">
+  <meta name="keywords" content="UI/UX Designer, Photographer, Bali, Portfolio, Web Design, Digital Experience">
+  <meta name="author" content="Pande Galih Satrio Utomo">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pande Galih - UI/UX Designer & Photographer">
+  <meta property="og:description" content="Crafting clean, meaningful digital experiences from Bali, Indonesia.">
+  <meta property="og:image" content="asset/profil1.jpg">
+  <meta property="og:url" content="https://pandegalih.com">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pande Galih - UI/UX Designer & Photographer">
+  <meta name="twitter:description" content="Crafting clean, meaningful digital experiences from Bali, Indonesia.">
+  <meta name="twitter:image" content="asset/profil1.jpg">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
+  
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body
-  class="min-h-screen bg-cover bg-center bg-no-repeat font-serif text-neutral-900"
-  style="background-image: url('asset/BG.png');"
->
+<body>
+  <!-- Skip Link for Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<!-- ================= NAVBAR ================= -->
-<header class="absolute top-6 w-full z-40">
-  <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar" role="banner">
+    <div class="container">
+      <nav class="navbar__inner" role="navigation" aria-label="Main navigation">
+        <!-- Logo -->
+        <a href="index.html" class="navbar__logo" aria-label="Pande Galih - Home">
+          PANDE GALIH
+        </a>
 
-    <!-- NAME -->
-    <span class="text-xs tracking-widest font-semibold">
-      PANDE GALIH
-    </span>
+        <!-- Desktop Navigation -->
+        <ul class="navbar__menu">
+          <li><a href="index.html" class="navbar__link navbar__link--active" aria-current="page">Home</a></li>
+          <li><a href="about.html" class="navbar__link">About</a></li>
+          <li><a href="mywork.html" class="navbar__link">Work</a></li>
+          <li><a href="contact.html" class="navbar__link">Contact</a></li>
+        </ul>
 
-    <!-- DESKTOP NAV -->
-    <nav class="hidden sm:flex gap-12 text-xs tracking-widest font-semibold">
-      <a href="index.html" class="opacity-100">HOME</a>
-      <a href="about.html" class="hover:opacity-60">ABOUT</a>
-      <a href="mywork.html" class="hover:opacity-60">MYWORK</a>
-      <a href="contact.html" class="hover:opacity-60">CONTACT</a>
-    </nav>
+        <!-- Mobile Menu Toggle -->
+        <button 
+          id="menuBtn" 
+          class="navbar__toggle" 
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <span class="navbar__toggle-line"></span>
+          <span class="navbar__toggle-line"></span>
+          <span class="navbar__toggle-line"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
 
-    <!-- BURGER (MOBILE) -->
-    <button id="menuBtn" class="sm:hidden flex flex-col gap-1.5">
-      <span class="w-6 h-px bg-black"></span>
-      <span class="w-6 h-px bg-black"></span>
-      <span class="w-6 h-px bg-black"></span>
+  <!-- ================= MOBILE MENU ================= -->
+  <div id="mobileMenu" class="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <button id="closeBtn" class="mobile-menu__close" aria-label="Close navigation menu">
+      ✕
     </button>
-
+    <a href="index.html" class="mobile-menu__link">Home</a>
+    <a href="about.html" class="mobile-menu__link">About</a>
+    <a href="mywork.html" class="mobile-menu__link">Work</a>
+    <a href="contact.html" class="mobile-menu__link">Contact</a>
   </div>
-</header>
 
-<!-- ================= MOBILE MENU ================= -->
-<div
-  id="mobileMenu"
-  class="fixed inset-0 z-50 bg-white/95
-         flex flex-col items-center justify-center
-         gap-10 text-sm tracking-widest font-semibold
-         opacity-0 pointer-events-none transition duration-300"
->
-  <button id="closeBtn" class="absolute top-6 right-6 text-xl">✕</button>
+  <!-- ================= MAIN CONTENT ================= -->
+  <main id="main-content" role="main">
+    
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero">
+      <!-- Background -->
+      <div class="hero__background">
+        <img 
+          src="asset/BG.png" 
+          alt="" 
+          class="hero__background-image"
+          loading="eager"
+        >
+        <div class="hero__pattern" aria-hidden="true"></div>
+      </div>
 
-  <a href="index.html">HOME</a>
-  <a href="about.html">ABOUT</a>
-  <a href="mywork.html">MYWORK</a>
-  <a href="contact.html">CONTACT</a>
-</div>
+      <div class="container">
+        <div class="hero__card animate-fade-in-up">
+          <div class="hero__content">
+            <!-- Text Content -->
+            <div class="hero__text">
+              <p class="label label--gold hero__label animate-fade-in-up">Portfolio</p>
+              
+              <h1 class="hero__title animate-fade-in-up">
+                PANDE GALIH<br>
+                <span class="hero__title-underline">SATRIO UTOMO</span>
+              </h1>
+              
+              <p class="hero__subtitle animate-fade-in-up">
+                UI/UX Designer and Photographer based in Bali, 
+                crafting clean, meaningful, and visually compelling 
+                digital experiences.
+              </p>
+              
+              <div class="hero__cta animate-fade-in-up">
+                <a href="mywork.html" class="btn btn--primary">
+                  View Work
+                </a>
+                <a href="contact.html" class="btn btn--ghost">
+                  Contact
+                </a>
+              </div>
+            </div>
 
-<!-- ================= HERO ================= -->
-<section class="min-h-screen flex items-center px-6 sm:px-12">
-  <div
-    class="bg-white/80 max-w-6xl mx-auto w-full
-           px-10 sm:px-20 py-16"
-  >
-
-    <div class="flex flex-col sm:flex-row items-center justify-between gap-16">
-
-      <!-- TEXT -->
-      <div class="max-w-lg text-center sm:text-left">
-        <p class="text-xs tracking-widest mb-6">
-          PORTFOLIO
-        </p>
-
-        <h1 class="text-3xl sm:text-5xl leading-tight mb-6">
-          PANDE GALIH<br />
-          <span class="border-b-2 border-black">
-            SATRIO UTOMO
-          </span>
-        </h1>
-
-        <p class="text-sm sm:text-lg leading-relaxed mb-10">
-          UI/UX Designer and Photographer
-          crafting clean, meaningful, and
-          visually compelling digital experiences.
-        </p>
-
-        <!-- CTA -->
-        <div class="flex justify-center sm:justify-start gap-6">
-          <a
-            href="mywork.html"
-            class="px-8 py-3 border border-black
-                   text-xs tracking-widest
-                   hover:bg-black hover:text-white
-                   transition"
-          >
-            VIEW WORK
-          </a>
-
-          <a
-            href="contact.html"
-            class="px-8 py-3 text-xs tracking-widest
-                   hover:opacity-60"
-          >
-            CONTACT
-          </a>
+            <!-- Profile Image -->
+            <div class="hero__image animate-scale-in">
+              <img 
+                src="asset/profil1.jpg" 
+                alt="Portrait photo of Pande Galih Satrio Utomo, UI/UX Designer and Photographer"
+                loading="eager"
+              >
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- IMAGE -->
-      <div class="shrink-0">
-        <img
-          src="asset/profil1.jpg"
-          alt="Pande Galih"
-          class="w-48 sm:w-72 object-cover"
-        />
+      <!-- Scroll Indicator -->
+      <div class="hero__scroll-indicator" aria-hidden="true">
+        <span>Scroll</span>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 5v14M19 12l-7 7-7-7"/>
+        </svg>
       </div>
+    </section>
 
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <p class="footer__text">
+        © 2024 Pande Galih. Crafted with <span class="footer__heart">♥</span> in Bali
+      </p>
     </div>
-  </div>
-</section>
+  </footer>
 
-<!-- ================= SCRIPT ================= -->
-<script>
-  const menuBtn = document.getElementById("menuBtn");
-  const closeBtn = document.getElementById("closeBtn");
-  const mobileMenu = document.getElementById("mobileMenu");
-
-  menuBtn.addEventListener("click", () => {
-    mobileMenu.classList.remove("opacity-0", "pointer-events-none");
-  });
-
-  closeBtn.addEventListener("click", () => {
-    mobileMenu.classList.add("opacity-0", "pointer-events-none");
-  });
-</script>
-
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+  
+  <!-- Additional inline styles for hero scroll indicator -->
+  <style>
+    .hero__scroll-indicator {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-gray);
+      animation: bounce 2s infinite;
+    }
+    
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+      }
+      40% {
+        transform: translateX(-50%) translateY(-10px);
+      }
+      60% {
+        transform: translateX(-50%) translateY(-5px);
+      }
+    }
+    
+    @media (max-width: 639px) {
+      .hero__scroll-indicator {
+        display: none;
+      }
+    }
+  </style>
 </body>
 </html>
