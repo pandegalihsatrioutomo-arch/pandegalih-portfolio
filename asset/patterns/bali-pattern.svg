@@ -1,31 +1,65 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
   <defs>
-    <pattern id="baliPattern" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
-      <!-- Patra Punggel inspired - curling leaf motif -->
-      <g fill="none" stroke="#C9A227" stroke-width="0.5" opacity="0.15">
-        <!-- Central flower -->
-        <circle cx="25" cy="25" r="3"/>
-        <circle cx="25" cy="25" r="6"/>
+    <pattern id="baliPattern" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+      <!-- Patra Punggel - Traditional Balinese Leaf Curl Motif -->
+      <g fill="none" stroke="#C9A227" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round">
         
-        <!-- Petals/leaves curling outward -->
-        <path d="M25 19 Q28 15 25 10 Q22 15 25 19"/>
-        <path d="M25 31 Q28 35 25 40 Q22 35 25 31"/>
-        <path d="M19 25 Q15 22 10 25 Q15 28 19 25"/>
-        <path d="M31 25 Q35 22 40 25 Q35 28 31 25"/>
+        <!-- Central Lotus/Padma Flower -->
+        <circle cx="30" cy="30" r="4" fill="#C9A227" fill-opacity="0.1"/>
+        <circle cx="30" cy="30" r="7"/>
+        <circle cx="30" cy="30" r="10"/>
         
-        <!-- Diagonal curls -->
-        <path d="M20 20 Q15 15 12 12"/>
-        <path d="M30 20 Q35 15 38 12"/>
-        <path d="M20 30 Q15 35 12 38"/>
-        <path d="M30 30 Q35 35 38 38"/>
+        <!-- Lotus Petals - 8 directions -->
+        <!-- Top -->
+        <path d="M30 20 Q33 15 30 8 Q27 15 30 20" stroke-width="1"/>
+        <path d="M30 12 Q32 10 30 6"/>
         
-        <!-- Small decorative dots -->
-        <circle cx="12" cy="12" r="1"/>
-        <circle cx="38" cy="12" r="1"/>
-        <circle cx="12" cy="38" r="1"/>
-        <circle cx="38" cy="38" r="1"/>
+        <!-- Bottom -->
+        <path d="M30 40 Q33 45 30 52 Q27 45 30 40" stroke-width="1"/>
+        <path d="M30 48 Q32 50 30 54"/>
+        
+        <!-- Left -->
+        <path d="M20 30 Q15 33 8 30 Q15 27 20 30" stroke-width="1"/>
+        <path d="M12 30 Q10 32 6 30"/>
+        
+        <!-- Right -->
+        <path d="M40 30 Q45 33 52 30 Q45 27 40 30" stroke-width="1"/>
+        <path d="M48 30 Q50 32 54 30"/>
+        
+        <!-- Diagonal Curls - Patra Style -->
+        <!-- Top-Left -->
+        <path d="M22 22 Q15 15 10 10" stroke-width="0.8"/>
+        <path d="M18 18 Q12 18 8 14 Q14 12 18 18" stroke-width="0.6"/>
+        <path d="M14 14 Q10 16 6 12"/>
+        
+        <!-- Top-Right -->
+        <path d="M38 22 Q45 15 50 10" stroke-width="0.8"/>
+        <path d="M42 18 Q48 18 52 14 Q46 12 42 18" stroke-width="0.6"/>
+        <path d="M46 14 Q50 16 54 12"/>
+        
+        <!-- Bottom-Left -->
+        <path d="M22 38 Q15 45 10 50" stroke-width="0.8"/>
+        <path d="M18 42 Q12 42 8 46 Q14 48 18 42" stroke-width="0.6"/>
+        <path d="M14 46 Q10 44 6 48"/>
+        
+        <!-- Bottom-Right -->
+        <path d="M38 38 Q45 45 50 50" stroke-width="0.8"/>
+        <path d="M42 42 Q48 42 52 46 Q46 48 42 42" stroke-width="0.6"/>
+        <path d="M46 46 Q50 44 54 48"/>
+        
+        <!-- Small decorative dots - Balinese style -->
+        <circle cx="8" cy="8" r="1.5" fill="#C9A227" fill-opacity="0.3"/>
+        <circle cx="52" cy="8" r="1.5" fill="#C9A227" fill-opacity="0.3"/>
+        <circle cx="8" cy="52" r="1.5" fill="#C9A227" fill-opacity="0.3"/>
+        <circle cx="52" cy="52" r="1.5" fill="#C9A227" fill-opacity="0.3"/>
+        
+        <!-- Additional curl details -->
+        <path d="M30 3 Q28 5 30 7 Q32 5 30 3" stroke-width="0.5"/>
+        <path d="M30 53 Q28 55 30 57 Q32 55 30 53" stroke-width="0.5"/>
+        <path d="M3 30 Q5 28 7 30 Q5 32 3 30" stroke-width="0.5"/>
+        <path d="M53 30 Q55 28 57 30 Q55 32 53 30" stroke-width="0.5"/>
       </g>
     </pattern>
   </defs>
-  <rect width="100" height="100" fill="url(#baliPattern)"/>
+  <rect width="120" height="120" fill="url(#baliPattern)"/>
 </svg>

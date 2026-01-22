@@ -1,22 +1,69 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
-  <g fill="none" stroke="#C9A227" stroke-width="1" opacity="0.6">
-    <!-- Corner frame -->
-    <path d="M5 55 L5 5 L55 5"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+  <g fill="none" stroke="#C9A227" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
     
-    <!-- Decorative curl at corner -->
-    <path d="M5 5 Q15 15 5 25"/>
-    <path d="M5 5 Q15 15 25 5"/>
+    <!-- Corner frame lines -->
+    <path d="M5 75 L5 5 L75 5" stroke-width="1.5"/>
     
-    <!-- Inner curl -->
-    <path d="M10 10 Q18 18 10 26"/>
-    <path d="M10 10 Q18 18 26 10"/>
+    <!-- Main corner lotus flower -->
+    <g transform="translate(15, 15)">
+      <circle cx="0" cy="0" r="3" fill="#C9A227" fill-opacity="0.15"/>
+      <circle cx="0" cy="0" r="6"/>
+      <circle cx="0" cy="0" r="9" stroke-dasharray="2,2"/>
+      
+      <!-- Lotus petals radiating from corner -->
+      <path d="M0 -9 Q4 -15 0 -22 Q-4 -15 0 -9" stroke-width="1.2"/>
+      <path d="M-9 0 Q-15 4 -22 0 Q-15 -4 -9 0" stroke-width="1.2"/>
+      
+      <!-- Diagonal petal towards corner -->
+      <path d="M-6 -6 Q-12 -12 -18 -18" stroke-width="1"/>
+      <path d="M-14 -14 Q-18 -10 -22 -14 Q-18 -18 -14 -14" stroke-width="0.8"/>
+      
+      <!-- Small curls -->
+      <path d="M6 -6 Q10 -10 14 -6 Q10 -2 6 -6" stroke-width="0.8"/>
+      <path d="M-6 6 Q-10 10 -6 14 Q-2 10 -6 6" stroke-width="0.8"/>
+    </g>
     
-    <!-- Small flower at corner -->
-    <circle cx="15" cy="15" r="2"/>
-    <circle cx="15" cy="15" r="4"/>
+    <!-- Patra curl along top edge -->
+    <g transform="translate(40, 8)">
+      <path d="M0 0 Q8 -5 16 0 Q8 5 0 0" stroke-width="0.8"/>
+      <path d="M16 0 Q20 -3 24 0" stroke-width="0.6"/>
+      <circle cx="24" cy="0" r="1.5" fill="#C9A227" fill-opacity="0.3"/>
+      
+      <!-- Small leaf detail -->
+      <path d="M8 -3 Q10 -6 8 -9" stroke-width="0.5"/>
+    </g>
     
-    <!-- Leaf accents -->
-    <path d="M20 8 Q25 5 30 8"/>
-    <path d="M8 20 Q5 25 8 30"/>
+    <!-- Patra curl along left edge -->
+    <g transform="translate(8, 40)">
+      <path d="M0 0 Q-5 8 0 16 Q5 8 0 0" stroke-width="0.8"/>
+      <path d="M0 16 Q-3 20 0 24" stroke-width="0.6"/>
+      <circle cx="0" cy="24" r="1.5" fill="#C9A227" fill-opacity="0.3"/>
+      
+      <!-- Small leaf detail -->
+      <path d="M-3 8 Q-6 10 -9 8" stroke-width="0.5"/>
+    </g>
+    
+    <!-- Decorative dots -->
+    <circle cx="5" cy="5" r="2" fill="#C9A227" fill-opacity="0.2"/>
+    <circle cx="60" cy="8" r="1" fill="#C9A227" fill-opacity="0.3"/>
+    <circle cx="8" cy="60" r="1" fill="#C9A227" fill-opacity="0.3"/>
+    
+    <!-- Additional small curls for richness -->
+    <path d="M30 5 Q32 2 35 5" stroke-width="0.5"/>
+    <path d="M5 30 Q2 32 5 35" stroke-width="0.5"/>
+    
+    <!-- Tiny accent flowers -->
+    <g transform="translate(50, 12)">
+      <circle cx="0" cy="0" r="1" fill="#C9A227" fill-opacity="0.2"/>
+      <path d="M0 -2 Q1 -3 0 -4 Q-1 -3 0 -2" stroke-width="0.4"/>
+      <path d="M2 0 Q3 1 4 0 Q3 -1 2 0" stroke-width="0.4"/>
+    </g>
+    
+    <g transform="translate(12, 50)">
+      <circle cx="0" cy="0" r="1" fill="#C9A227" fill-opacity="0.2"/>
+      <path d="M-2 0 Q-3 1 -4 0 Q-3 -1 -2 0" stroke-width="0.4"/>
+      <path d="M0 2 Q1 3 0 4 Q-1 3 0 2" stroke-width="0.4"/>
+    </g>
+    
   </g>
 </svg>
